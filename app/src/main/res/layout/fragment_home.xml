@@ -8,18 +8,18 @@
     android:layout_height="match_parent"
     tools:context=".home">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/ellipse"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
+        android:background="@drawable/ellipse"
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,95 +30,115 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:padding="24dp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="24dp">
 
             <TextView
-                android:textSize="24dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_bold"
                 android:text="Welcome back!"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24dp" />
 
             <TextView
-                android:textSize="14dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/open_sans_semibold"
                 android:text="what do you feel like today?"
-                android:textColor="#A5A5A5" />
+                android:textColor="#A5A5A5"
+                android:textSize="14dp" />
 
             <androidx.appcompat.widget.SearchView
-                android:layout_marginTop="24dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/searchback"
-               />
+                android:layout_marginTop="24dp"
+                android:background="@drawable/searchback" />
+
             <HorizontalScrollView
                 android:layout_width="wrap_content"
-                android:scrollbars="none"
-                android:layout_height="wrap_content">
-            <com.google.android.material.chip.ChipGroup
-                android:layout_width="match_parent"
-                android:layout_marginTop="24dp"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
 
-                android:layout_height="wrap_content">
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:text="Recent"
-                    app:chipStrokeWidth="0dp"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:textColor="@color/white"
-                    android:backgroundTint="@android:color/transparent"
-                    android:layout_height="wrap_content"/>
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:text="Top 50"
-                    app:chipStrokeWidth="0dp"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:textColor="@color/lightgray"
-                    android:backgroundTint="@android:color/transparent"
-                    android:layout_height="wrap_content"/>
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:text="Chill"
-                    app:chipStrokeWidth="0dp"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:textColor="@color/lightgray"
-                    android:backgroundTint="@android:color/transparent"
-                    android:layout_height="wrap_content"/>
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:text="R&amp;B"
-                    app:chipStrokeWidth="0dp"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:textColor="@color/lightgray"
-                    android:backgroundTint="@android:color/transparent"
-                    android:layout_height="wrap_content"/>
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:text="Festival"
-                    app:chipStrokeWidth="0dp"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:textColor="@color/lightgray"
-                    android:backgroundTint="@android:color/transparent"
-                    android:layout_height="wrap_content"/>
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
-            </com.google.android.material.chip.ChipGroup></HorizontalScrollView>
+                    android:layout_marginTop="24dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Recent"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        app:chipStrokeWidth="0dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Top 50"
+                        android:textColor="@color/lightgray"
+                        android:textSize="16dp"
+                        app:chipStrokeWidth="0dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Chill"
+                        android:textColor="@color/lightgray"
+                        android:textSize="16dp"
+                        app:chipStrokeWidth="0dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="R&amp;B"
+                        android:textColor="@color/lightgray"
+                        android:textSize="16dp"
+                        app:chipStrokeWidth="0dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Festival"
+                        android:textColor="@color/lightgray"
+                        android:textSize="16dp"
+                        app:chipStrokeWidth="0dp" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_marginTop="8dp"
                 android:id="@+id/recycler"
-                android:layout_height="wrap_content"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="26dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Your favourites"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
